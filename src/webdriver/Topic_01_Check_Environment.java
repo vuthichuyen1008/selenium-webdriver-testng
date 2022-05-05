@@ -18,7 +18,7 @@ public class Topic_01_Check_Environment {
 	public void beforeClass() {
 		System.setProperty("webdriver.gecko.driver", projectPath + "\\BrowserDrivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("https://www.facebook.com/");
 	}
@@ -34,7 +34,7 @@ public class Topic_01_Check_Environment {
 	public void TC_02_ValidatePageTitle() {
 		// Login Page title
 		String loginPageTitle = driver.getTitle();
-		Assert.assertEquals(loginPageTitle, "Facebook – log in or sign up.");
+		Assert.assertEquals(loginPageTitle, "Facebook â€“ log in or sign up");
 	}
 
 	@Test
